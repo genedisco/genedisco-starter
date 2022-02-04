@@ -133,6 +133,8 @@ Once you have set up your submission environment, you will need to create a ligh
 
 - Navigate to the directory to which you have cloned this repo to.
   - `$ cd /path/to/genedisco-starter`
+- Ensure you have ONE acquisition function (inheriting from `BaseBatchAcquisitionFunction`) in [main.py](src/main.py)
+  - _This is your pre-defined program entry point._ 
 - Build your container image
   - `$ docker build -t submission:latest .`
 - Save your image name to a shell variable

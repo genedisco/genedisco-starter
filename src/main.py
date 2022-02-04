@@ -48,34 +48,6 @@ def softmax_temperature(x, temperature=1):
         return out_np
 
 
-class TopUncertainAcquisition(BaseBatchAcquisitionFunction):
-    def __call__(self,
-                 dataset_x: AbstractDataSource,
-                 select_size: int,
-                 available_indices: List[AnyStr], 
-                 last_selected_indices: List[AnyStr] = None, 
-                 model: AbstractBaseModel = None,
-                 ) -> List:
-        avail_dataset_x = dataset_x.subset(available_indices)
-        model_pedictions = model.predict(avail_dataset_x, return_std_and_margin=True)
-
-        if len(model_pedictions) != 3:
-            raise TypeError("The provided model does not output uncertainty.")
-        
-        pred_mean, pred_uncertainties, _ = model_pedictions
-
-        if len(pred_mean) < select_size:
-            raise ValueError("The number of query samples exceeds"
-                             "the size of the available data.")
-        
-        numerical_selected_indices = np.flip(
-            np.argsort(pred_uncertainties)
-        )[:select_size]
-        selected_indices = [available_indices[i] for i in numerical_selected_indices]
-        
-        return selected_indices
-
-
 class SoftUncertainAcquisition(BaseBatchAcquisitionFunction):
     def __call__(self,
                  dataset_x: AbstractDataSource,
