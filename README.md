@@ -18,6 +18,15 @@ pip install -r requirements.txt
 
 ## Use
 
+### Setup
+
+- Create a cache directory. This will hold any preprocessed and downloaded datasets for faster future invocation.
+  - `$ mkdir /path/to/genedisco_cache`
+  - _Replace the above with your desired cache directory location._
+- Create an output directory. This will hold all program outputs and results.
+  - `$ mkdir /path/to/genedisco_output`
+  - _Replace the above with your desired output directory location._
+
 ### How to Run the Full Benchmark Suite?
 
 Experiments (all baselines, acquisition functions, input and target datasets, multiple seeds) included in GeneDisco can be executed sequentially for e.g. acquired batch size `64`, `8` cycles and a `bayesian_mlp` model using:
@@ -73,7 +82,7 @@ active_learning_loop  \
     --output_directory=/path/to/genedisco/genedisco_output \
     --model_name="bayesian_mlp" \
     --acquisition_function_name="custom" \
-    --acquisition_function_path=/path/to/main.py \
+    --acquisition_function_path=/path/to/src/main.py \
     --acquisition_batch_size=64 \
     --num_active_learning_cycles=8 \
     --feature_set_name="achilles" \
