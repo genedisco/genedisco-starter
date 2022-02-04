@@ -136,7 +136,7 @@ Once you have set up your submission environment, you will need to create a ligh
 - Build your container image
   - `$ docker build -t submission:latest .`
 - Save your image name to a shell variable
-  - `$ IMAGE="localhost/submission:latest"`
+  - `$ IMAGE="submission:latest"`
 - Use the EvalAI-CLI command to submit your image
   - Run the following command to submit your container image:
     - `$ evalai push $IMAGE --phase gsk-genedisco-challenge-1528`
