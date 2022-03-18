@@ -3,7 +3,7 @@
 ![Python version](https://img.shields.io/badge/Python-3.8-blue)
 ![Library version](https://img.shields.io/badge/Version-1.0.0-blue)
 
-The starter repository for submissions to the [GeneDisco challenge](https://www.gsk.ai/genedisco-challenge/) (with a total of £20'000 of prizes) for optimized experimental design in genetic perturbation experiments.
+The starter repository for submissions to the [GeneDisco challenge](https://www.gsk.ai/genedisco-challenge/) for optimized experimental design in genetic perturbation experiments.
 
 [GeneDisco (to be published at ICLR-22)](https://arxiv.org/abs/2110.11875) is a benchmark suite for evaluating active 
 learning algorithms for experimental design in drug discovery. 
