@@ -178,6 +178,14 @@ Yes we will open up a 2nd subtask to the challenge on eval.ai shortly so that pa
 The idea is for participants to develop and evaluate their own solutions internally against the many existing baselines already implemented in [GeneDisco](https://github.com/genedisco/genedisco) - hence there is no public leaderboard.
 There will be a final private leaderboard that we will score through the eval.ai submission system.
 
+#### _"Are the cycle number and the batch size fixed to 8 and 64 during the competition?"_
+
+Yes, we will be fixing batch size and cycle number to numbers appropriate for the held-out tasks that the submissions will be evaluated against. You can expect them to be similar to the ones used in [the paper](https://arxiv.org/abs/2110.11875).
+
+#### _"Will only the performances in the final cycle be considered for scoring?"_
+
+Performance after the final iteration is the metric by which submissions will be compared. Interim steps will not be contributing to the final score.
+
 ## Citation
 
 Please consider citing, if you reference or use our methodology, code or results in your work:
