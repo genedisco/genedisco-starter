@@ -149,6 +149,35 @@ That’s it! Our pipeline will take your image and test your function.
 If you have any questions or concerns, please reach out to us at [genedisco-challenge@gsk.com](mailto:genedisco-challenge@gsk.com?subject=[GeneDisco-Support-Request])
 
 
+### Frequently Asked Questions (FAQ)
+
+#### _"Will there be a public challenge leaderboard?"_
+
+No. Participants are asked to compare their solutions internally against the provided baselines in the `genedisco` repository.
+A final private leaderboard will be created using the submissions received via `eval.ai` after the challenge submission period is closed.
+
+#### _"Which specific parts of the whole app lifecycle are we allowed to change?"_
+
+You are able to change the acquisition function only (please see instructions above). We have chosen to fix the predictor and other aspects of the active learning loop in order to enable comparability of the developed solutions (there is a complex dependency between model, acquisition function and data).
+
+#### _"How will submissions be scored?"_
+
+We will score submissions against the two subtasks using the metrics calculated in `genedisco` - overall hit rate (% of top movers discovered) and model performance (mean squared model error) at the end of the active learning loop (after the last cycle).
+Note that we will score the solutions against a held-out set of tasks not known to the participants via `genedisco`.
+
+#### _"How do you define the best submission? Is it the last one or the best from all submitted?"_
+
+We will use the last submission to calculate the team's score to avoid conferring an advantage to teams that produce more submissions.
+
+#### _"Are the tasks evaluated independently? So I can Make 2 submissions with different Acquisition Functions and win in both subtasks?"_
+
+Yes we will open up a 2nd subtask to the challenge on eval.ai shortly so that participating team's can submit independent solutions for each subchallenge.
+
+#### _"The submissions limit (10) seems to be quite low. Especially that the evaluation measure in the challenge is not explicitly stated."_
+
+The idea is for participants to develop and evaluate their own solutions internally against the many existing baselines already implemented in [GeneDisco](https://github.com/genedisco/genedisco) - hence there is no public leaderboard.
+There will be a final private leaderboard that we will score through the eval.ai submission system.
+
 ## Citation
 
 Please consider citing, if you reference or use our methodology, code or results in your work:
