@@ -186,6 +186,10 @@ Yes, we will be fixing batch size and cycle number to numbers appropriate for th
 
 Performance after the final iteration is the metric by which submissions will be compared. Interim steps will not be contributing to the final score.
 
+#### _"For the competition, will we be provided the models' checkpoints or this is hidden from us?"_
+
+The retrained model is exposed to your acquisition function at every iteration via the model parameter to the acquisition function method invocation. You are free to use it as you see fit and as the API allows. However, please note that you will not receive the checkpoint files from us as your acquisition function will be running end-to-end on our cloud servers for evaluation (there is no interactive mode for participants; the code is considered final once submitted).
+
 ## Citation
 
 Please consider citing, if you reference or use our methodology, code or results in your work:
