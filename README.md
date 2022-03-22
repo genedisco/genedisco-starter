@@ -141,8 +141,12 @@ Once you have set up your submission environment, you will need to create a ligh
   - `$ IMAGE="submission:latest"`
 - Use the EvalAI-CLI command to submit your image
   - Run the following command to submit your container image:
+    - For Task 1: Maximize Target Discovery Rate
+    - `$ evalai push $IMAGE --phase gsk-genedisco-test-1528`
+    - For Task 2: Maximize Model Performance
     - `$ evalai push $IMAGE --phase gsk-genedisco-challenge-1528`
     - **Please note** that you have a maximum number of submissions that any submission will be counted against.
+    - **Please note** that you will not receive your final private leaderboard score until the challenge period is over.
 
 That’s it! Our pipeline will take your image and test your function.
 
@@ -171,7 +175,7 @@ We will use the last submission to calculate the team's score to avoid conferrin
 
 #### _"Are the tasks evaluated independently? So I can Make 2 submissions with different Acquisition Functions and win in both subtasks?"_
 
-Yes we will open up a 2nd subtask to the challenge on eval.ai shortly so that participating team's can submit independent solutions for each subchallenge.
+Yes we have opened two subtasks in the challenge on [eval.ai](https://eval.ai/web/challenges/challenge-page/1528/submission) so that participating team's can submit independent solutions for each subchallenge (Task 1: Maximize Target Discovery Rate, Task 2: Maximize Model Performance).
 
 #### _"The submissions limit (10) seems to be quite low. Especially that the evaluation measure in the challenge is not explicitly stated."_
 
